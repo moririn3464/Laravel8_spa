@@ -12,7 +12,7 @@ function Example() {
 
                         <div className="card-body">pagesディレクトリに移動</div>
                         
-                        <Button color="primary" variant="contained">Hello World</Button>
+                        <Button color="secondary" variant="contained" hred={`home`}>HOMEに戻る</Button>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,3 @@ function Example() {
 }
 
 export default Example;
-
-if (document.getElementById('app')) {
-    ReactDOM.render(<Example />, document.getElementById('app'));
-}
