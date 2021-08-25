@@ -8147,33 +8147,6 @@ var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__.default
 }); //ヘッダーのコンテンツ用の配列定義
 
 var headerList = ['名前', 'タスク内容', '編集', '完了'];
-var rows = [{
-  name: "モーリー",
-  content: "肩トレ",
-  editBtn: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
-    color: "secondary",
-    variant: "contained",
-    children: "\u7DE8\u96C6"
-  }),
-  deleteBtn: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
-    color: "primary",
-    variant: "contained",
-    children: "\u5B8C\u4E86"
-  })
-}, {
-  name: "ドンキーコング",
-  content: "バナナ補給",
-  editBtn: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
-    color: "secondary",
-    variant: "contained",
-    children: "\u7DE8\u96C6"
-  }),
-  deleteBtn: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
-    color: "primary",
-    variant: "contained",
-    children: "\u5B8C\u4E86"
-  })
-}];
 
 function Home() {
   //定義したスタイルを利用するための設定
@@ -8197,6 +8170,23 @@ function Home() {
     });
   };
 
+  var rows = [];
+  posts.map(function (post) {
+    return rows.push({
+      name: post.name,
+      content: post.content,
+      editBtn: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
+        color: "secondary",
+        variant: "contained",
+        children: "\u7DE8\u96C6"
+      }),
+      deleteBtn: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
+        color: "primary",
+        variant: "contained",
+        children: "\u5B8C\u4E86"
+      })
+    });
+  });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "container",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
